@@ -61,11 +61,11 @@ if __name__ == "__main__":
     # parse our filename
     splitted = os.path.basename(sys.argv[0]).split("_")
     try:
-        name = sanitized(splitted[0])
+        name = sanitized("_".join(splitted[0:-1]))
     except IndexError:
         name = "muniversal"
     try:
-        plot = sanitized(splitted[1])
+        plot = sanitized(splitted[-1])
     except IndexError:
         plot = sanitized(sys.argv[0])
 
