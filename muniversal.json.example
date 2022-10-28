@@ -1,0 +1,29 @@
+{
+  "sensors": {
+    "test": {
+      "logfile": "./test.json",
+      "config": {
+        "graph_title": "Solar Controller",
+        "graph_category": "sensors",
+        "graph_info": "Solar Panels + Batteries",
+        "graph_scale": "no",
+        "bat_voltage.label": "Battery Voltage (V)",
+        "bat_voltage.type": "GAUGE",
+        "solar_voltage.label": "Solar Voltage (V)",
+        "solar_voltage.type": "GAUGE",
+        "charge_current.label": "Charge Current (A)",
+        "charge_current.type": "GAUGE",
+        "charge_power.label": "Charge Power (W)",
+        "charge_power.type": "GAUGE",
+        "temp_ctrl.label": "Controller Temp"
+      },
+      "valuemap": {
+        "V_bat": "bat_voltage",
+        "V_solar": "solar_voltage",
+        "I_charge": "charge_current",
+        "P_charge": "charge_power",
+        "ctrl_temp": "temp_ctrl"
+      }
+    }
+  }
+}
