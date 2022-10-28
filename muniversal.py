@@ -52,7 +52,7 @@ def sanitized(s):
         .normalize('NFKD', s) \
         .encode('ASCII', 'ignore') \
         .decode('UTF-8')
-    s = re.sub(r"[^A-Za-z]+", "", s)
+    s = re.sub(r"[^A-Za-z0-9_]+", "", s)
     return re.sub(r"\s", r"_", s)
 
 # ---------------------------------------------------------------------
