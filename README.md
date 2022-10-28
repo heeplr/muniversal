@@ -26,7 +26,7 @@ Possible muniversal.json:
 {
   "sensors": {
     "solar": {
-      "logfile": "./test.json",
+      "logfile": "/var/log/solar.json",
       "config": {
         "graph_title": "Solar Controller",
         "graph_category": "sensors",
