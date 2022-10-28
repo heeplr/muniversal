@@ -56,4 +56,4 @@ Possible muniversal.json:
 
 * '''logfile''' contains one or more json streams
 * '''config''' contains munin config
-* '''valuemap''' maps json stream keys to munin values
+* '''valuemap''' contains one dict per logfile to map json stream keys to munin values

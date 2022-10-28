@@ -19,17 +19,20 @@ def print_values(config):
     """print values for munin"""
 
     # ensure list
-    logfiles = config["logfile"]
+    logfiles = config["logfiles"]
     if not isinstance(logfiles, (list, tuple)):
         logfiles = [ logfiles ]
 
     # process all logfiles
     for logfile in logfiles:
         with open(logfile, "rb") as fd:
+            # get valuemap of this logfile
+            configname = os.path.basename(logfile)
+            valuemap = config["valuemap"][configname]
             # last line of file
             datagram = json.loads(tail(fd))
             # map dict to munin values according to valuemap
-            for k,v in config["valuemap"].items():
+            for k,v in valuemap.items():
                 print(f"{v}.value {datagram[k]}")
 
 def tail(fd):

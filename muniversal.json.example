@@ -1,7 +1,7 @@
 {
   "sensors": {
     "test": {
-      "logfile": "./test.json",
+      "logfiles": "./test.json",
       "config": {
         "graph_title": "Solar Controller",
         "graph_category": "sensors",
@@ -18,11 +18,13 @@
         "temp_ctrl.label": "Controller Temp"
       },
       "valuemap": {
-        "V_bat": "bat_voltage",
-        "V_solar": "solar_voltage",
-        "I_charge": "charge_current",
-        "P_charge": "charge_power",
-        "ctrl_temp": "temp_ctrl"
+        "test.json": {
+            "V_bat": "bat_voltage",
+            "V_solar": "solar_voltage",
+            "I_charge": "charge_current",
+            "P_charge": "charge_power",
+            "ctrl_temp": "temp_ctrl"
+        }
       }
     }
   }
