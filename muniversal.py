@@ -33,7 +33,9 @@ def print_values(config):
             datagram = json.loads(tail(fd))
             # map dict to munin values according to valuemap
             for k,v in valuemap.items():
-                print(f"{v}.value {datagram[k]}")
+                # only print output if value is actually in datagram
+                if k in datagram:
+                    print(f"{v}.value {datagram[k]}")
 
 def tail(fd):
     """return last line of file"""
